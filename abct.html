@@ -26,4 +26,82 @@
         }
 
         /* Fundo de nebulosas */
-     
+        .nebula {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 70%);
+            background-size: 500px 500px;
+            animation: nebulaMove 30s linear infinite;
+            opacity: 0.4;
+            filter: blur(2px);
+        }
+
+        /* Animação das estrelas */
+        @keyframes starMove {
+            from { transform: translateX(0) translateY(0); }
+            to { transform: translateX(-50%) translateY(-50%); }
+        }
+
+        /* Animação das nebulosas */
+        @keyframes nebulaMove {
+            from { transform: translateX(0) translateY(0); }
+            to { transform: translateX(25%) translateY(25%); }
+        }
+
+        /* Estilos para planetas */
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            animation: planetMove 40s linear infinite;
+        }
+
+        /* Planeta 1 */
+        .planet1 {
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at 30% 30%, #ffcc66, #ff9933, #cc6600);
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        /* Planeta 2 */
+        .planet2 {
+            width: 70px;
+            height: 70px;
+            background: radial-gradient(circle at 60% 60%, #66ccff, #336699, #003366);
+            top: 50%;
+            left: 70%;
+            animation-delay: 10s;
+        }
+
+        /* Planeta 3 */
+        .planet3 {
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle at 40% 40%, #ff99cc, #cc3366, #660033);
+            top: 80%;
+            left: 30%;
+            animation-delay: 20s;
+        }
+
+        /* Animação de movimento dos planetas */
+        @keyframes planetMove {
+            from { transform: translateY(0); }
+            to { transform: translateY(-200%); }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Fundo de estrelas e nebulosas -->
+    <div class="stars"></div>
+    <div class="nebula"></div>
+
+    <!-- Planetas em diferentes posições -->
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <div class="planet planet3"></div>
+</body>
+</html>
