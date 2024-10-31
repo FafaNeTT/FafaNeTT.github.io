@@ -1,11 +1,9 @@
-html
-Copiar código
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo Passando</title>
+    <title>Universo com Planetas</title>
     <style>
         /* Define a altura total da página */
         html, body {
@@ -17,7 +15,7 @@ Copiar código
             background-color: black;
         }
 
-        /* Container para as estrelas */
+        /* Fundo de estrelas */
         .stars {
             position: absolute;
             width: 200%;
@@ -27,34 +25,5 @@ Copiar código
             animation: starMove 20s linear infinite;
         }
 
-        /* Container para as "nebulosas" em forma de gradiente */
-        .nebula {
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 70%);
-            background-size: 500px 500px;
-            animation: nebulaMove 30s linear infinite;
-            opacity: 0.4;
-            filter: blur(2px);
-        }
-
-        /* Animação para as estrelas */
-        @keyframes starMove {
-            from { transform: translateX(0) translateY(0); }
-            to { transform: translateX(-50%) translateY(-50%); }
-        }
-
-        /* Animação para as "nebulosas" */
-        @keyframes nebulaMove {
-            from { transform: translateX(0) translateY(0); }
-            to { transform: translateX(25%) translateY(25%); }
-        }
-    </style>
-</head>
-<body>
-    <!-- Fundo de estrelas e nebulosas -->
-    <div class="stars"></div>
-    <div class="nebula"></div>
-</body>
-</html>
+        /* Fundo de nebulosas */
+     
